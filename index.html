@@ -9,12 +9,29 @@
 <body>
     <div class="container">
         <h1>MEME MATCHING GAME</h1>
+        <div class="game-info">
+            <div class="player-info">
+                <h2>Current Player: <span id="current-player">Player 1</span></h2>
+                <h3>Score: <span id="score">0</span></h3>
+            </div>
+            <div class="timer">Time: <span id="time">60</span>s</div>
+        </div>
         <p class="instructions">
-            Welcome to the Meme Matching Game!  Flip over two cards at a time and try to find all the matching pairs. Be quick and remember where you saw the cards!
+            Welcome to the Meme Matching Game! Flip over two cards at a time and try to find all the matching pairs. Be quick and remember where you saw the cards!
         </p>
-        <button id="start-game">Start Game</button>
-        <div id="game-board" class="game-board">
-            <!-- Cards will be generated here -->
+        <div class="controls">
+            <button id="start-game">Start Game</button>
+            <select id="grid-size">
+                <option value="10">5x2 Grid (10 Cards)</option>
+                <option value="16">4x4 Grid (16 Cards)</option>
+                <option value="20">5x4 Grid (20 Cards)</option>
+            </select>
+            <input type="number" id="player-count" min="1" max="4" value="1" placeholder="Number of Players">
+        </div>
+        <div id="game-board" class="game-board"></div>
+        <div id="scoreboard" class="scoreboard">
+            <h2>Scoreboard</h2>
+            <div id="player-scores"></div>
         </div>
     </div>
     <script src="script.js"></script>
