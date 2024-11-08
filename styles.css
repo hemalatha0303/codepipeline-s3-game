@@ -1,7 +1,7 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #282c34;
-    color: #ffffff;
+    font-family: 'Roboto', sans-serif; 
+    background-color: #282c34; 
+    color: #ffffff; 
     text-align: center;
     margin: 0;
     padding: 0;
@@ -9,68 +9,35 @@ body {
 
 .container {
     width: auto;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #3c404d;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-}
-
-.game-info {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.timer {
-    font-size: 24px;
-    color: #4caf50;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #3c404d; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    border-radius: 15px; 
 }
 
 h1 {
-    color: white;
-    margin-bottom: 10px;
+    color: white; 
 }
 
 .instructions {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 30px;
     color: #adbac7;
-}
-
-.controls {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
 }
 
 #game-board {
     display: grid;
-    gap: 10px;
-    justify-content: center;
-    padding: 20px;
-    margin: auto;
-}
-
-.grid-10 {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
-}
-
-.grid-16 {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
-
-.grid-20 {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
 .card {
-    width: 150px;
-    height: 150px;
+    width: 211.8px;
+    height: 166.2px;
     background-color: #565c6f;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -79,46 +46,31 @@ h1 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
 }
 
 .card img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    visibility: hidden;
+    height: auto;
+    visibility: hidden; /* Hide images by default */
+    display: block;
 }
 
 .card.show img {
-    visibility: visible;
+    visibility: visible; /* Show image when card is flipped */
 }
 
-#start-game, #grid-size, #player-count {
+#start-game {
     background-color: #4caf50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-}
-
-#grid-size, #player-count {
-    background-color: #565c6f;
-}
-
-.scoreboard {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #565c6f;
-    border-radius: 10px;
-}
-
-.player-score {
-    margin: 10px 0;
     font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#start-game:hover {
+    background-color: #43a047; /* Darker on hover */
+    transform: scale(1.05); /* Slightly enlarges on hover */
 }
